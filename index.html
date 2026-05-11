@@ -824,6 +824,31 @@ footer span { color:var(--green); }
 #page-cv .skill-tag:hover { border-color: var(--green); color: var(--green); background: var(--green-glow); }
 #page-cv .award-item { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 0; border-bottom: 1px solid var(--border); }
 #page-cv .award-icon { font-size: 1.35rem; flex-shrink: 0; }
+  #page-cv .award-icon-logo {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+#page-cv .award-icon-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+
+#page-cv .award-item:hover .award-icon-logo img {
+  transform: scale(1.05);
+  transition: transform 0.25s ease;
+}
 #page-cv .award-name { color: var(--white); font-weight: 500; font-size: 0.92rem; line-height: 1.45; }
 #page-cv .award-org { color: var(--text-mid); font-size: 0.8rem; margin-top: 0.15rem; }
 #page-cv .service-card { padding: 1.2rem 1.35rem; margin-bottom: 0.9rem; display: flex; gap: 1rem; align-items: flex-start; }
@@ -1650,13 +1675,15 @@ def analyze_fabaceae_genome(fasta_path, ref):
         <div class="award-org">Biology GSO · NMSU Graduate School</div>
       </div>
     </div>
-    <div class="award-item">
-      <div class="award-icon">📚</div>
-      <div>
-        <div class="award-name">Rajshahi University Scholarship Award</div>
-        <div class="award-org">Four years of academic scholarship · 14,400 BDT + full tuition waiver</div>
-      </div>
-    </div>
+   <div class="award-item">
+  <div class="award-icon-logo">
+    <img src="rajshahi-logo.png" alt="University of Rajshahi logo">
+  </div>
+  <div>
+    <div class="award-name">Rajshahi University Scholarship Award</div>
+    <div class="award-org">Four years of academic scholarship · 14,400 BDT + full tuition waiver</div>
+  </div>
+</div>
   </div>
 
 
